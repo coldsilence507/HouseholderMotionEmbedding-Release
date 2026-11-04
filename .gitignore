@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Outputs, caches, logs
+ckpt/
+ckpts/
+outputs/
+latent_cache/
+wandb/
+*.log
+*.mp4
+*.gif
+
+# Large weights (host on the Hub; small FlowHouseholder .pth files are tracked)
+checkpoints/*
+!checkpoints/README.md
+*.safetensors
+*.bin
+*.ckpt
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

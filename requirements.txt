@@ -1,0 +1,24 @@
+# Tested with Python 3.12, CUDA 12.8 (install torch/torchvision for your CUDA first:
+# https://pytorch.org/get-started/locally/).
+torch==2.7.0
+torchvision==0.22.0
+diffusers==0.36.0
+transformers==5.1.0
+accelerate==1.12.0
+peft==0.18.1
+safetensors==0.7.0
+sentencepiece==0.2.1
+opencv-python==4.10.0.82
+numpy==1.26.4
+pillow==11.3.0
+imageio==2.37.2
+imageio-ffmpeg==0.6.0
+tqdm==4.67.3
+typing_extensions==4.15.0
+packaging==25.0
+
+# Training only (rp provides list/mean helpers used by the training script)
+rp==0.1.1402
+decord==0.6.0
+einops==0.8.2
+wandb==0.25.0
