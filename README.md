@@ -1,4 +1,4 @@
-# Householder Motion Embedding: Noise Modulation for Motion-Controllable Video Generation
+# [NeurIPS 2026 Spotlight] Householder Motion Embedding: Noise Modulation for Motion-Controllable Video Generation
 
 Motion-controllable image-to-video generation by **transforming the initial noise** with optical flow.
 
