@@ -28,7 +28,7 @@ Tested with Python 3.12, PyTorch 2.7 and CUDA 12.8. Install the PyTorch build fo
 
 | File | Size | Where |
 |---|---|---|
-| `training/cogvideox/model/flow_householder_P{1,2,4,8,12}.pth` | 0.5–6 KB | included in this repo |
+| `training/cogvideox/model/flow_householder_P2.pth` | 1 KB | included in this repo |
 | NoiseControl LoRA for CogVideoX-5B-I2V (`pytorch_lora_weights.safetensors`) | 4.2 GB | _coming soon_ |
 
 The `FlowHouseholder` weights are **not trained**. They are a fixed, seeded initialisation that stays
