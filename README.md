@@ -45,12 +45,11 @@ Output: a 49-frame, 480×720 video at 8 fps.
 
 ```bash
 python infer.py \
-  --ref_video   examples/reference.mp4 \
-  --first_frame examples/first_frame.png \
-  --prompt      "A cheetah running across a rainforest road, bright daylight, photorealistic." \
-  --lora_path   checkpoints/pytorch_lora_weights.safetensors \
-  --output      outputs/cheetah.mp4 \
-  --alpha       0.3
+    --ref_video   /path/to/reference.mp4 \
+    --first_frame /path/to/first_frame.png \
+    --prompt      "your text prompt here" \
+    --output      output.mp4 \
+    --alpha       0.3
 ```
 
 This also writes `outputs/cheetah_flow_vis.mp4`, a colour-coded visualisation of the estimated flow.
@@ -140,11 +139,13 @@ RealCam-Vid dataset.
 ## Citation
 
 ```bibtex
-@article{noisecontrol,
-  title   = {NoiseControl},
-  author  = {},
-  journal = {},
-  year    = {}
+@article{lin2026hme,
+  title     = {Householder Motion Embedding: Noise Modulation for
+               Motion-Controllable Video Generation},
+  author    = {Lin, Tao Jun and Ni, Jinhong and Zha, Ruyi and Wang, Yifu
+               and Song, Xibin and Ji, Pan and Li, Hongdong},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
 }
 ```
 

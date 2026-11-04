@@ -55,8 +55,7 @@ from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 from transformers import AutoTokenizer, T5EncoderModel
 
-from model.HouseHolderTransform1 import HouseholderTransform, canonicalize_plucker
-from model.HouseHolderTransform_flow_no_rev import FlowHouseholder
+from model.HouseHolderTransform_flow import FlowHouseholder
 
 import rp 
 # rp.git_import('CommonSource')
@@ -226,7 +225,7 @@ def run_validation(
     args: Dict[str, Any],
     accelerator: Accelerator,
     transformer,
-    householder_transform: HouseholderTransform,
+    householder_transform: FlowHouseholder,
     raft_model,
     scheduler,
     model_config: Dict[str, Any],
