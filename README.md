@@ -10,7 +10,7 @@ orthogonal, so the noise stays exactly Gaussian, and it is palindromic, so rever
 [CogVideoX-5B-I2V](https://huggingface.co/THUDM/CogVideoX-5b-I2V), fine-tuned with a LoRA so that it
 follows the motion encoded in the noise.
 
-> [![Project Page](https://img.shields.io/badge/Project-Page-green?logo=googlechrome&logoColor=green)](https://https://coldsilence507.github.io/HouseholderMotionEmbedding/)
+> [![Project Page](https://img.shields.io/badge/Project-Page-green?logo=googlechrome&logoColor=green)](https://coldsilence507.github.io/HouseholderMotionEmbedding/)
  · **Weights:** _coming soon_
 
 ## Installation
