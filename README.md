@@ -5,8 +5,7 @@ Motion-controllable image-to-video generation by **transforming the initial nois
 NoiseControl takes a reference motion (a video, or a pre-computed optical-flow field) and turns it
 into temporally correlated Gaussian noise. Each frame's noise is obtained from the previous one by a
 **per-pixel, flow-conditioned Householder transform** (`FlowHouseholder`). The transform is
-orthogonal, so the noise stays exactly Gaussian, and it is palindromic, so reversing the flow inverts it
-(`Q(-f) = Q(f)^-1`). The warped noise is the initial latent of
+orthogonal, so the noise stays exactly Gaussian. The warped noise is the initial latent of
 [CogVideoX-5B-I2V](https://huggingface.co/THUDM/CogVideoX-5b-I2V), fine-tuned with a LoRA so that it
 follows the motion encoded in the noise.
 
