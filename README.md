@@ -87,8 +87,6 @@ For the paper's MC-Bench numbers, the flow outside the dragged object's mask was
 not do this, so slight background motion can appear in the MC-Bench examples.
 
 
-This also writes `outputs/cheetah_flow_vis.mp4`, a colour-coded visualisation of the estimated flow.
-
 **From a pre-computed flow field** (skips RAFT):
 
 ```bash
