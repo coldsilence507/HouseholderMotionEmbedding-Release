@@ -53,6 +53,40 @@ python infer.py \
     --alpha       0.3
 ```
 
+This also writes `output_flow_vis.mp4` next to the output: a colour-coded visualisation of the estimated flow.
+
+**Examples from the paper.** Every inference example shown in the paper and supplementary material has
+its own folder under `assets/`:
+
+```
+assets/<example>/
+  reference.mp4     # reference video (motion source)
+  first_frame.png   # input first frame
+  prompt.txt        # text prompt
+  run.sh            # inference command with the paper settings
+```
+
+```bash
+export LORA_PATH=/path/to/pytorch_lora_weights.safetensors   # default: checkpoints/pytorch_lora_weights.safetensors
+bash assets/teaser_motion_transfer_astronaut/run.sh           # one example -> outputs/teaser_motion_transfer_astronaut.mp4
+bash scripts/run_examples.sh 'davis_*'                        # all examples whose folder matches a glob
+bash scripts/run_examples.sh                                  # all 35 examples
+```
+
+| Folder prefix | Examples | Reference video | `--alpha` |
+|---|---|---|---|
+| `teaser_` | camera motion (aerial estate), motion transfer (astronaut), local motion (penguin) | rendered camera-motion signal / DAVIS `lucia` / cut-and-drag signal | 0.3 / 0.8 / 0.6 |
+| `motion_transfer_` | cyberpunk robots | DAVIS `lab-coat` | 0.5 (seed 4) |
+| `davis_` | 8 DAVIS sequences | the original DAVIS clip | 0.3 |
+| `dl3dv_` | 6 DL3DV-10K camera trajectories | the original DL3DV-10K clip | 0.3 |
+| `mc_bench_` | 17 MC-Bench object / fine-grained drags | cut-and-drag motion signal rendered from the MC-Bench trajectory | 0.6 |
+
+All examples use 30 sampling steps, guidance 6.0, and seed 42 unless the table says otherwise. Sampling is
+stochastic across GPUs and library versions, so your outputs can differ from the paper's in detail but not in the motion.
+For the paper's MC-Bench numbers, the flow outside the dragged object's mask was also set to zero. `infer.py` does
+not do this, so slight background motion can appear in the MC-Bench examples.
+
+
 This also writes `outputs/cheetah_flow_vis.mp4`, a colour-coded visualisation of the estimated flow.
 
 **From a pre-computed flow field** (skips RAFT):
@@ -135,7 +169,8 @@ training/cogvideox/
 This code builds on [CogVideoX](https://github.com/THUDM/CogVideo) and its diffusers LoRA fine-tuning
 scripts, [Go-with-the-Flow](https://github.com/Eyeline-Labs/Go-with-the-Flow) (noise degradation
 and temporal down-sampling), [RAFT](https://github.com/princeton-vl/RAFT) via torchvision, and the
-RealCam-Vid dataset.
+RealCam-Vid dataset. The example inputs come from [DAVIS](https://davischallenge.org/),
+[DL3DV-10K](https://github.com/DL3DV-10K/Dataset) and MC-Bench, and remain under their original licenses.
 
 ## Citation
 
