@@ -11,7 +11,7 @@ orthogonal, so the noise stays exactly Gaussian, and it is palindromic, so rever
 follows the motion encoded in the noise.
 
 > [![Project Page](https://img.shields.io/badge/Project-Page-green?logo=googlechrome&logoColor=green)](https://coldsilence507.github.io/HouseholderMotionEmbedding/)
- · **Weights:** _coming soon_
+  [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-HouseholderMotionEmbedding-blue)](https://huggingface.co/anujeremylin/HouseholderMotionEmbedding/tree/main)
 
 ## Installation
 
