@@ -29,7 +29,7 @@ Tested with Python 3.12, PyTorch 2.7 and CUDA 12.8. Install the PyTorch build fo
 | File | Size | Where |
 |---|---|---|
 | `training/cogvideox/model/flow_householder_P2.pth` | 1 KB | included in this repo |
-| NoiseControl LoRA for CogVideoX-5B-I2V (`pytorch_lora_weights.safetensors`) | 4.2 GB | _coming soon_ |
+| NoiseControl LoRA for CogVideoX-5B-I2V (`pytorch_lora_weights.safetensors`) | 4.2 GB | [Download Here](https://huggingface.co/anujeremylin/HouseholderMotionEmbedding/blob/main/pytorch_lora_weights.safetensors)  |
 
 The `FlowHouseholder` weights are **not trained**. They are a fixed, seeded initialisation that stays
 frozen during LoRA training. They were drawn with a CUDA RNG, which is not reproducible on CPU, so
