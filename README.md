@@ -9,7 +9,8 @@ orthogonal, so the noise stays exactly Gaussian. The warped noise is the initial
 [CogVideoX-5B-I2V](https://huggingface.co/THUDM/CogVideoX-5b-I2V), fine-tuned with a LoRA so that it
 follows the motion encoded in the noise.
 
-> [![Project Page](https://img.shields.io/badge/Project-Page-green?logo=googlechrome&logoColor=green)](https://coldsilence507.github.io/HouseholderMotionEmbedding/)
+> [![arXiv](https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv&logoColor=red)](https://arxiv.org/abs/2611.07294)
+  [![Project Page](https://img.shields.io/badge/Project-Page-green?logo=googlechrome&logoColor=green)](https://coldsilence507.github.io/HouseholderMotionEmbedding/)
   [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-HouseholderMotionEmbedding-blue)](https://huggingface.co/anujeremylin/HouseholderMotionEmbedding/tree/main)
 
 ## Installation
